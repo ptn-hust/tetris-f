@@ -504,7 +504,7 @@ void handleClient(int clientSocket)
                                str1.end());
                     checkLogin.arr[j].isLoggedIn = "true";
                     std::string newValue = "true";
-                    // updateFieldInFile(e, 3, newValue);
+                    updateFieldInFile(e, 3, newValue);
                     sendWrapper(clientSocket, "+OK||4", 7, 0);
                     checkSuccess++;
                     break;
@@ -987,16 +987,16 @@ void handleClient(int clientSocket)
 int main()
 {
     // Initialize Winsock
-    room room1;
-    room1.name = "Phong1abuabuabu";
-    room1.sockets.push_back(12345); // Thay thế bằng socket thực tế
-    room1.sockets.push_back(54321); // Thêm socket khác nếu cần
-    gameRooms.push_back(room1);
+    // room room1;
+    // room1.name = "Phong1";
+    // room1.sockets.push_back(12345); // Thay thế bằng socket thực tế
+    // room1.sockets.push_back(54321); // Thêm socket khác nếu cần
+    // gameRooms.push_back(room1);
 
-    room room2;
-    room2.name = "Phong2";
-    room2.sockets.push_back(67890); // Thay thế bằng socket thực tế
-    gameRooms.push_back(room2);
+    // room room2;
+    // room2.name = "Phong2";
+    // room2.sockets.push_back(67890); // Thay thế bằng socket thực tế
+    // gameRooms.push_back(room2);
 
     // Setup server socket
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);

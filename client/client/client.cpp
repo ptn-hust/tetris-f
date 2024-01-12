@@ -156,7 +156,7 @@ std::vector<Player> receiveRank(int serverSocket)
 		// Nhận tên acc
 		int nameSize;
 		receiveWrapper(serverSocket, reinterpret_cast<char *>(&nameSize), sizeof(int), 0);
-		char nameBuffer123[256]; // Điều này là giả định, bạn có thể sử dụng động để tránh giới hạn kích thước cứng
+		char nameBuffer123[256];
 		receiveWrapper(serverSocket, nameBuffer123, nameSize, 0);
 		player.name = std::string(nameBuffer123, nameSize);
 		std::cout << "\n"
@@ -165,7 +165,7 @@ std::vector<Player> receiveRank(int serverSocket)
 		// Nhận score
 		int scoreSize;
 		receiveWrapper(serverSocket, reinterpret_cast<char *>(&scoreSize), sizeof(int), 0);
-		char nameBuffer321[256]; // Điều này là giả định, bạn có thể sử dụng động để tránh giới hạn kích thước cứng
+		char nameBuffer321[256]; 
 		receiveWrapper(serverSocket, nameBuffer321, scoreSize, 0);
 		player.score = std::string(nameBuffer321, scoreSize);
 		std::cout << player.score << " \n ";
@@ -306,7 +306,7 @@ int main()
 	std::vector<Room> friendList;
 	std::vector<Room> requestList;
 
-	RenderWindow window(VideoMode(600, 600), "Login System made by Abu");
+	RenderWindow window(VideoMode(600, 600), "Tetris game");
 	Texture t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;
 
 	t1.loadFromFile("images/Login.png");
